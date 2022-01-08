@@ -8,16 +8,16 @@ Members: 5
 braydenyip.github.io/htj2022
 
 ### Idea 1: Outputs 1st liked track and most liked artist
-Incorporating Spotify's Web API, Spotipy, to list the liked songs of a user. This information is then used to describe to the user what their first saved track was, as well as which artist they have the most songs saved.
-    TO DO's: 
+Incorporating Spotify's Web API, Spotipy, to list the liked songs of a user. This information is then used to describe to the user what their first saved track was, as well as which artist they have the most songs saved. *newline*
+*tabspace*    TO DO's: Save only the 1st liked song, tally the most common artist (maybe?).
 
 ### Idea 2: Outputs most common mood
-Incorporating the Spotipy API to organize the liked songs of a user into mood categories. Using "loudness" and "tempo" from 'sections' in Spotify's Audio Analysis json to create a range for each user input to have it's own custom result. Results will be created from a list of moods and their related ranges (loudness + tempo), and print which mood is the most popular for the user.
-    TO DO's: Find out how to pull json with values from track's audio features, calculate a formula to pair with moods and print most occuring (ie. counter for each mood).
+Incorporating the Spotipy API to organize the liked songs of a user into mood categories. Using "loudness" and "tempo" from 'sections' in Spotify's Audio Analysis json to create a range for each user input to have it's own custom result. Results will be created from a list of moods and their related ranges (loudness + tempo), and print which mood is the most popular for the user. *newline*
+*tabspace*    TO DO's: Find out how to pull json with values from track's audio features, calculate a formula to pair with moods and print most occuring (ie. counter for each mood).
 
 ### Idea 3: Outputs song for inputted mood
-Incorporating Spotify's Web API, Spotipy, to list songs that match a user's mood. These categories are stored in a dictionary of moods with associated songs. These moods will be calculated using energy < float >, mode < 0 or 1 >, and loudness.
-    TO DO's: Find out how to pull json with values from track's audio features, calculate formula to pair with moods, print out a song(s) for each mood
+Incorporating Spotify's Web API, Spotipy, to list songs that match a user's mood. These categories are stored in a dictionary of moods with associated songs. These moods will be calculated using energy < float >, mode < 0 or 1 >, and loudness. *newline*
+*tabspace*    TO DO's: Find out how to pull json with values from track's audio features, calculate formula to pair with moods, print out a song(s) for each mood.
 
 ______________________________________
 References:
