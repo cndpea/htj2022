@@ -21,9 +21,9 @@ Incorporating Spotify's Web API, Spotipy, to list songs that match a user's mood
 
 ______________________________________
 Backend References:
-https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features,
 https://spotipy.readthedocs.io/en/2.19.0/ 
 
 Frontend References:
-https://www.youtube.com/watch?v=kng-mJJby8g
+https://www.youtube.com/watch?v=kng-mJJby8g,
 https://www.youtube.com/watch?v=dam0GPOAvVI
