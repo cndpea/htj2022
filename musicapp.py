@@ -13,7 +13,7 @@ def authentic_version():
     results = sp.current_user_saved_tracks(limit=1, offset=0)
     n = results['total']
     m = n//50 # get how many chunks of 50 we can do at once
-    r = n%50 #remainds
+    r = n%50 #remainder
     print(m)
     print(r)
     for i in range(m):
@@ -23,6 +23,7 @@ def authentic_version():
             track = item['track']
             print(idx+50*i, track['artists'][0]['name'], " – ", track['name'], "(uri: ", track['uri'], ")")
     for j in range(r):
+        #remainder are processed individually
         results = sp.current_user_saved_tracks(limit=1, offset=(i+1)*50+j)
         for idx, item in enumerate(results['items']):
             track = item['track']
