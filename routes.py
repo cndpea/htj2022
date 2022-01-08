@@ -13,10 +13,10 @@ def get_auth():
     if request.method == 'POST':
         email = request.form.get('email')
         if len(email) < 5:
-            flash('Must be a valid email address!', category='error')
+            flash('Must be a valid email address!', 'error')
             error='Invalid email'
         else:
-            flash('Loading your results!', category='success') 
+            flash('Loading your results!', 'success') 
             print('success')  
     print(data)
     return render_template("auth.html", error=error)

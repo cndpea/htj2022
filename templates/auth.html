@@ -12,26 +12,15 @@
   </h1></div>
 
 <!-- Allowing error checking alert messages to appear on page -->
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-  {% for category, message in messages %}
-  {% if category=='error'%}
-    <div class="alert alert-danger alter-dismissable fade show" role="alert">
-      {{message}}
-      <button type="btn" class="close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    {% else %}
-    <div class="alert alert-success alter-dismissable fade show" role="alert">
-      {{message}}
-      <button type="btn" class="close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+<!-- from: https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/ -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
   {% endif %}
-  {% endfor %}
-{% endif %}
 {% endwith %}
 
 <form method="POST">
@@ -45,3 +34,27 @@
   </form>
 </body>
 </html>
+
+<!-- 
+  {% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+  {% for category, message in messages %}
+    {% if category=='error'%}
+      <div class="alert alert-danger alter-dismissable fade show" role="alert">
+        {{message}}
+        <button type="btn" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% else %}
+      <div class="alert alert-success alter-dismissable fade show" role="alert">
+        {{message}}
+        <button type="btn" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% endwith %}
+-->
