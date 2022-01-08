@@ -19,10 +19,9 @@ def main():
     sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="2e7959faa85f44d6b2e859064f9dd1aa",
                                                                client_secret="2514bb7ab37e449ba19db71e9f43bfc2"))
 
-    results = sp.search(q='joji', limit=20)
-    print(results['tracks']['items'])
+    results = sp.search(q='joji', limit=1)
     for idx, track in enumerate(results['tracks']['items']):
         print(idx, track['name'])
-    #authentic_version()
+    authentic_version()
 
 main()
