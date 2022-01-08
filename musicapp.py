@@ -15,22 +15,24 @@ def authentic_version():
     n = results['total'] #gives number of saved tracks.
     m = n//50 # get how many chunks of 50 we can do at once
     r = n%50 #remainder
-
+    lowest_v = 2
     for i in range(m):
         #doing 50 at a time results in much, much faster processing
         results = sp.current_user_saved_tracks(limit=50, offset=i*50)
         for idx, item in enumerate(results['items']):
             track = item['track']
-            v = (sp.audio_features(track['uri'])[0]['valence'])
-            print(idx+50*i, track['artists'][0]['name'], " – ", track['name'],  "v=", v)
-
+            v = sp.audio_features(track['uri'])[0]['valence']
+            l = sp.audio_features(track['uri'])[0]['loudness']
+            print(idx+50*i, track['artists'][0]['name'], " – ", track['name'],  "v=", v, ", l=", l)
+    i += 1
     for j in range(r):
         #remainder are processed individually
         results = sp.current_user_saved_tracks(limit=1, offset=(i+1)*50+j)
         for idx, item in enumerate(results['items']):
             track = item['track']
-            v = (sp.audio_features(track['uri'])[0]['valence']) # this gets the valence of each song and prints it out
-            print(idx+50*(i+1)+j, track['artists'][0]['name'], " – ", track['name'], "v=", v)
+            v = sp.audio_features(track['uri'])[0]['valence']
+            d = sp.audio_features(track['uri'])[0]['danceability']
+            print(idx + 50 * i + j, track['artists'][0]['name'], " – ", track['name'], "v=", v, ", d=", d)
 def main():
     authentic_version()
 
