@@ -4,6 +4,10 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from spotipy.oauth2 import SpotifyOAuth
 
 #secret will be made invalid on Monday, if you need it again lmk
+    ## can't you just use a random secret key like 
+        # app.config['SECRET_KEY'] = 'the random string' 
+        # or
+        # app.secret_key = 'the random string'
 id="2e7959faa85f44d6b2e859064f9dd1aa"
 secrt="2514bb7ab37e449ba19db71e9f43bfc2"
 

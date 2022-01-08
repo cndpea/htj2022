@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hack the Job</title>
+</head>
+<body>
+  <div> <h1>
+   Valgrind my Mind team
+  </h1></div>
+
+<!-- Allowing error checking alert messages to appear on page -->
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  {% for category, message in messages %}
+  {% if category=='error'%}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{message}}
+      <button type="btn" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{message}}
+      <button type="btn" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endif %}
+  {% endfor %}
+{% endif %}
+{% endwith %}
+
+<form method="POST">
+  <h3>Get Connected!</h3>
+  <div class="form-group">
+    <label for="email">Enter your Spotify user email:</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Type email...">
+    <br><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  </form>
+</body>
+</html>
