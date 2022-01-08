@@ -20,8 +20,9 @@ def main():
                                                                client_secret="2514bb7ab37e449ba19db71e9f43bfc2"))
 
     results = sp.search(q='joji', limit=20)
+    print(results['tracks']['items'])
     for idx, track in enumerate(results['tracks']['items']):
         print(idx, track['name'])
-    authentic_version()
+    #authentic_version()
 
 main()
