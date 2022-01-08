@@ -1,7 +1,7 @@
 # htj2022
 Hack the Job Project 2022
 
-Team: Valgrind my Mind
+Team: Valgrind my Mind\
 Members: 5
 
 ## Using Spotify's API:
@@ -20,6 +20,11 @@ Incorporating Spotify's Web API, Spotipy, to list songs that match a user's mood
 - TO DO's: Find out how to pull json with values from track's audio features, calculate formula to pair with moods, print out a song(s) for each mood.
 
 ______________________________________
-References:
-https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features
-https://spotipy.readthedocs.io/en/2.19.0/ 
+Backend References:
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features  
+https://spotipy.readthedocs.io/en/2.19.0/
+
+Frontend & Linking References:
+https://www.youtube.com/watch?v=kng-mJJby8g  
+https://www.youtube.com/watch?v=dam0GPOAvVI  
+https://www.w3schools.com/html/html_examples.asp
