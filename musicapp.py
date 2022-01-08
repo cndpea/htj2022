@@ -14,8 +14,6 @@ def authentic_version():
     n = results['total']
     m = n//50 # get how many chunks of 50 we can do at once
     r = n%50 #remainder
-    print(m)
-    print(r)
     for i in range(m):
         #doing 50 at a time results in much, much faster processing
         results = sp.current_user_saved_tracks(limit=50, offset=i*50)
@@ -29,13 +27,6 @@ def authentic_version():
             track = item['track']
             print(idx+50*(i+1)+j, track['artists'][0]['name'], " – ", track['name'],"(uri: ", track['uri'], ")")
 def main():
-    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="2e7959faa85f44d6b2e859064f9dd1aa",
-                                                               client_secret="2514bb7ab37e449ba19db71e9f43bfc2"))
-
-    results = sp.search(q='joji', limit=5)
-    for idx, track in enumerate(results['tracks']['items']):
-        print(idx+1, track['name'])
-    print("---")
     authentic_version()
 
 main()
