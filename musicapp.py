@@ -21,6 +21,7 @@ def authentic_version():
         #doing 50 at a time results in much, much faster processing
         results = sp.current_user_saved_tracks(limit=1, offset=random.randrange(0,(n-1)))
         if (len(results) == 0):
+            print('No results for this account')
             break
         track = results['items'][0]['track']
         uri = track['uri']
@@ -28,16 +29,16 @@ def authentic_version():
         v = af['valence']
         d = af['danceability']
         e = af['energy']
-        score = (0.4*e+0.6*d+0.6*v)
+        score = (0.4*e+0.6*d+0.6*v) * 100
 
         if (score > hi_score):
             hi_score_track = track['uri']
             hi_score = score
-            print(i, '*')
-        else:
-            print(i)
+            #print(i, '*')
+        
     print(sp.track(hi_score_track)['artists'][0]['name'], " - ", sp.track(hi_score_track)['name'])
-    print("score= ", hi_score)
+    final_score = "{:.2f}".format(hi_score)
+    print("score = ", final_score)
 def main():
     authentic_version()
 
