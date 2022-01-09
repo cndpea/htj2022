@@ -28,7 +28,7 @@ def authentic_version():
         v = af['valence']
         d = af['danceability']
         e = af['energy']
-        score = (0.7*e + 1.2*d + 0.5*v + af['mode'])
+        score = (0.4*e + 0.5*d + 0.5*v + 0.5*(af['mode']))
 
         if (score > hi_score):
             hi_score_track = track['uri']
