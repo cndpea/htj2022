@@ -6,6 +6,16 @@ routes = Blueprint(__name__, "routes")
 def home():
     return render_template("index.html", app="musicapp.py", result="Spotify")
 
+## JSON reading
+@routes.route("/json")
+def get_json():
+    return jsonify({'app': ['valence', 'tempo', 'loudness', 'timbre'], 'hi': ['greeting', 'salutation']})
+
+## Redirecting to a page
+@routes.route("/music-app")
+def run_app():
+    return redirect(url_for("routes.home"))
+
 @routes.route("/auth", methods=['GET', 'POST'])
 def get_auth():
     error=None
@@ -20,16 +30,6 @@ def get_auth():
             print('success')  
     print(data)
     return render_template("auth.html", error=error)
-
-## JSON reading
-@routes.route("/json")
-def get_json():
-    return jsonify({'app': ['valence', 'tempo', 'loudness', 'timbre']})
-
-## Redirecting to a page
-@routes.route("/go-home")
-def go_home():
-    return redirect(url_for("routes.home"))
 
 ## Getting Data
 # @routes.route("/data")
