@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Hackathon 20220107 - Hack Your Job</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/anteseifertpupic31739b166/">Ante S.-P.</a> </li>
+                    <li><a href="https://www.linkedin.com/in/brayden-yip">Brayden Y.</a> </li>
+                    <li><a href="https://www.linkedin.com/in/cindyzhang-cz/">Cindy Z.</a> </li>
+                    <li><a href="https://www.linkedin.com/in/karina-g-285883216/">Karina G.</a> </li>
+                    <li><a href="https://www.linkedin.com/in/samy-rashed-1529511a9/">Samy R.</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h1>MATCH YOUR MOOD</h1>
+            <p>Enter your current mood to get a list of matching songs <br> Select the mood to get started <br> Please note that this feature requires your Spotify access permission</p>
+            <div class="dropdown">
+                <button class="dropbtn">MOOD</button>
+                <div class="dropdown-content">
+                    <a href="#">Broken</a>
+                    <a href="#">Depressed</a>
+                    <a href="#">Despair</a>
+                    <a href="#">Doom</a>
+                    <a href="#">Elegant</a>
+                    <a href="#">Energetic</a>
+                    <a href="#">Epic</a>
+                    <a href="#">Happy</a>
+                    <a href="#">Hungry</a>
+                    <a href="#">Lost</a>
+                    <a href="#">Melancholic</a>
+                    <a href="#">Mood</a>
+                    <a href="#">Sad</a>
+                    <a href="#">Satisfied</a>
+                    <a href="#">Scared</a>
+                    <a href="#">Shy</a>
+                    <a href="#">Stressed</a>
+                    <a href="#">Strong</a>
+                    <a href="#">Surprised</a>
+                    <a href="#">Triumphant</a>
+                </div>
+            </div>
+            <div>
+                <button type="button"><span></span>PROJECT DETAILS</button>
+            </div>
+        </div>
+    </body>
+</html>
