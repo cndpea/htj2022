@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hackathon 20220107 - Results</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1> Results</h1>
+                    <p>Here is a list of songs from your Spotify account that matches your current mood</p>
+                    <!-- <button type="button">Explore</button> -->
+                    <ul>
+                      <li>music</li>
+                      <li>music</li>
+                      <li>music</li>
+                      <li>music</li>
+                      <li>music</li>
+                      <li>music</li>
+                      <li>music</li>
+                      <li>music</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="card card1">
+                        <h5>line 29</h5>
+                        <p>line 30</p>
+                    </div>
+                    <div class="card card2">
+                        <h5>line 29</h5>
+                        <p>line 30</p>
+                    </div>
+                    <div class="card card3">
+                        <h5>line 29</h5>
+                        <p>line 30</p>
+                    </div>
+                    <div class="card card4">
+                        <h5>line 29</h5>
+                        <p>line 30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
