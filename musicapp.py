@@ -41,10 +41,15 @@ def authentic_version(sp):
             print(i)
     print(sp.track(hi_score_track)['artists'][0]['name'], " - ", sp.track(hi_score_track)['name'])
     print("score= {0:.3f}".format(hi_score))
+    print(sp.track(hi_score_track))
+    user_id = sp.current_user()['id']
+    playlist = sp.user_playlist_create(user_id, "Playlist for " + user_id, description = "Created by Song Finder" )
+    sp.user_playlist_add_tracks(user_id, playlist['id'], [sp.track(hi_score_track)['id']])
 
 def main():
     scopes = ["user-library-read", "playlist-modify-public"]
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope= scopes, client_id = id, client_secret = secrt, redirect_uri= 'http://localhost:8080'))
     authentic_version(sp)
+
 
 main()
