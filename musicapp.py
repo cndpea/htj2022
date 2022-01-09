@@ -14,7 +14,7 @@ def authentic_version():
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope, client_id = id, client_secret = secrt, redirect_uri= 'http://localhost:8080'))
     results = sp.current_user_saved_tracks(limit=1, offset=0)
     n = results['total'] #gives number of saved tracks.
-    search_length = 10 #how many random tracks to check, keep under a hundred
+    search_length = 20 #how many random tracks to check, keep under a hundred
     hi_score_track = ""
     hi_score = 0
     for i in range(search_length):
